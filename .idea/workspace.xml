@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bbafd809-39b8-45b0-aedc-a14325effc21" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cX4xhMTaZzQJXIkkIWIMLh9daY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\nevexisInvoices\pdfBox-test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.PDFBoxTestMain">
+    <configuration name="PDFBoxTestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PDFBoxTestMain" />
+      <module name="pdfBox-test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pdffilecreator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pdffilecreator" />
+      <module name="pdfBox-test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PDFBoxTestMain" />
+        <item itemvalue="Application.pdffilecreator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bbafd809-39b8-45b0-aedc-a14325effc21" name="Default Changelist" comment="" />
+      <created>1590661851485</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590661851485</updated>
+      <workItem from="1590661854652" duration="9527000" />
+      <workItem from="1590732282627" duration="2442000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="524" y="30" key="#xdebugger.evaluate" timestamp="1590671668171">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="524" y="30" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1590671668171" />
+    <state width="427" height="618" key="DebuggerActiveHint" timestamp="1590670066303">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="427" height="618" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1590670066303" />
+    <state width="1493" height="253" key="GridCell.Tab.0.bottom" timestamp="1590756527442">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590756527442" />
+    <state width="1493" height="253" key="GridCell.Tab.0.center" timestamp="1590756527442">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590756527442" />
+    <state width="1493" height="253" key="GridCell.Tab.0.left" timestamp="1590756527442">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590756527442" />
+    <state width="1493" height="253" key="GridCell.Tab.0.right" timestamp="1590756527442">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590756527442" />
+    <state width="1493" height="129" key="GridCell.Tab.1.bottom" timestamp="1590676637759">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="129" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590676637759" />
+    <state width="1493" height="129" key="GridCell.Tab.1.center" timestamp="1590676637759">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="129" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590676637759" />
+    <state width="1493" height="129" key="GridCell.Tab.1.left" timestamp="1590676637759">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="129" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590676637759" />
+    <state width="1493" height="129" key="GridCell.Tab.1.right" timestamp="1590676637759">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="129" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590676637759" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590732296021">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590732296021" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590756479381">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590756479381" />
+  </component>
+</project>
