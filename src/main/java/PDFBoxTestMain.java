@@ -14,6 +14,7 @@ import org.apache.pdfbox.pdmodel.common.PDStream;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
+import org.apache.pdfbox.text.PDFTextStripper;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,17 +25,30 @@ public class PDFBoxTestMain {
 
     public static void main(String[] args) throws IOException {
 
-        File template = new File("template.pdf");
+        File template = new File("Deutsch.pdf");
         PDDocument document = PDDocument.load(template);
 
-        String outputFileName = "template-after-replace.pdf";
+
+        //Instantiate PDFTextStripper class
+        PDFTextStripper pdfStripper = new PDFTextStripper();
+
+        //Retrieving text from PDF document
+        String text = pdfStripper.getText(document);
+        text.replace("Deckblatt","kur");
+        pdfStripper.getText(document).replace("Deckblatt","kur");
+        System.out.println(text);
+
+
+
+        String outputFileName = "Deutsch-nekuvproben.pdf";
         // the encoding will need to be adapted to your circumstances
         String encoding = "ISO-8859-1";
 
         // Note that search and replace can be regular expressions
-        // replace all occurrences of 'Hello'
-        searchReplace("Name", "Asen", encoding, true, document);
-        searchReplace("xxx", "nomer", encoding, true, document);
+//        // replace all occurrences of 'Hello'
+//        searchReplace("Rücksende", "nt", encoding, true, document);
+//        searchReplace("für", "ert", encoding, true, document);
+//        //searchReplace("Boring", "skuka", encoding, true, document);
 
         // Save the results and ensure that the document is properly closed
         document.save(outputFileName);
@@ -42,6 +56,10 @@ public class PDFBoxTestMain {
 
     }
 
+
+
+
+/*
 
     private static void searchReplace (String search, String replace,
                                        String encoding, boolean replaceAll, PDDocument doc) throws IOException {
@@ -90,5 +108,6 @@ public class PDFBoxTestMain {
             page.setContents(updatedStream);
         }
     }
+*/
 
 }
