@@ -22,33 +22,38 @@ public class WORDDocumenttoPdfTest {
              * XWPFDocument
              */
             XWPFDocument doc = new XWPFDocument(
-                    OPCPackage.open("wordTest.docx"));
+                    OPCPackage.open("template.docx"));
+
             for (XWPFParagraph p : doc.getParagraphs()) {
                 List<XWPFRun> runs = p.getRuns();
                 if (runs != null) {
                     for (XWPFRun r : runs) {
                         String text = r.getText(0);
-                        if (text != null && text.contains("Rücksende")) {
-                            text = text.replace("Rücksende", "nekuv nemski text");//your content
+                        if (text != null && text.contains("Absender Name")) {
+                            text = text.replace("Absender Name", "Absender Asen");//your content
                             r.setText(text, 0);
                         }
-
-                        if (text != null && text.contains("Asen")) {
-                            text = text.replace("Asen", "Asen edit java Rücksende");//your content
+                        if (text != null && text.contains("Absender Straße")) {
+                            text = text.replace("Absender Straße", "Absender Ulica");//your content
+                            r.setText(text, 0);
+                        }
+                        if (text != null && text.contains("Absender Ort")) {
+                            text = text.replace("Absender Ort", "Absender mqsto");//your content
                             r.setText(text, 0);
                         }
                     }
                 }
             }
 
+            //the table
             for (XWPFTable tbl : doc.getTables()) {
                 for (XWPFTableRow row : tbl.getRows()) {
                     for (XWPFTableCell cell : row.getTableCells()) {
                         for (XWPFParagraph p : cell.getParagraphs()) {
                             for (XWPFRun r : p.getRuns()) {
                                 String text = r.getText(0);
-                                if (text != null && text.contains("Georgi")) {
-                                    text = text.replace("Georgi", "ABCD");//your content
+                                if (text != null && text.contains("xxx")) {
+                                    text = text.replace("xxx", "615");//your content
                                     r.setText(text, 0);
                                 }
                             }
@@ -57,14 +62,18 @@ public class WORDDocumenttoPdfTest {
                 }
             }
 
-         //   doc.write(new FileOutputStream("output.docx"));
+            doc.write(new FileOutputStream("output.docx"));
+
+            //convertion
+            XWPFDocument forConvertion = new XWPFDocument(
+                    OPCPackage.open("output.docx"));
 
             // 2) Convert POI XWPFDocument 2 PDF with iText
-            File outFile = new File( "result-from-word.pdf" );
+            File outFile = new File( "tempwla4te-from-word3.pdf" );
 
             OutputStream out = new FileOutputStream( outFile );
-            PdfOptions options = PdfOptions.create().fontEncoding( "windows-1250" );
-            PdfConverter.getInstance().convert( doc, out, options );
+            PdfOptions options = PdfOptions.getDefault();
+            PdfConverter.getInstance().convert( forConvertion, out, options );
         } finally {
 
         }
