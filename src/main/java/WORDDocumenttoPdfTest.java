@@ -12,6 +12,21 @@ import java.util.List;
 
 public class WORDDocumenttoPdfTest {
 
+    private static final String NAME = "Asen";
+    private static final String STREET = "street";
+    private static final String ORT = "ORTNQKUV";
+
+    //TAbLE
+    private static final String Fillial = "615";
+    private static final String CUSTOMERNUMBER = "9050501";
+    private static final String ACCOUNTOWNER = "Asen Nikolaev";
+
+
+    private static final String DateEnquiry = "07.11.2018";
+
+
+
+
     public static void main(String args[]) throws IOException,
             InvalidFormatException,
             org.apache.poi.openxml4j.exceptions.InvalidFormatException {
@@ -24,43 +39,8 @@ public class WORDDocumenttoPdfTest {
             XWPFDocument doc = new XWPFDocument(
                     OPCPackage.open("template.docx"));
 
-            for (XWPFParagraph p : doc.getParagraphs()) {
-                List<XWPFRun> runs = p.getRuns();
-                if (runs != null) {
-                    for (XWPFRun r : runs) {
-                        String text = r.getText(0);
-                        if (text != null && text.contains("Absender Name")) {
-                            text = text.replace("Absender Name", "Absender Asen");//your content
-                            r.setText(text, 0);
-                        }
-                        if (text != null && text.contains("Absender Straße")) {
-                            text = text.replace("Absender Straße", "Absender Ulica");//your content
-                            r.setText(text, 0);
-                        }
-                        if (text != null && text.contains("Absender Ort")) {
-                            text = text.replace("Absender Ort", "Absender mqsto");//your content
-                            r.setText(text, 0);
-                        }
-                    }
-                }
-            }
-
-            //the table
-            for (XWPFTable tbl : doc.getTables()) {
-                for (XWPFTableRow row : tbl.getRows()) {
-                    for (XWPFTableCell cell : row.getTableCells()) {
-                        for (XWPFParagraph p : cell.getParagraphs()) {
-                            for (XWPFRun r : p.getRuns()) {
-                                String text = r.getText(0);
-                                if (text != null && text.contains("xxx")) {
-                                    text = text.replace("xxx", "615");//your content
-                                    r.setText(text, 0);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            updateParagraphs(doc);
+            updateTable(doc);
 
             doc.write(new FileOutputStream("output.docx"));
 
@@ -78,5 +58,63 @@ public class WORDDocumenttoPdfTest {
 
         }
 
+    }
+
+
+    private static void updateParagraphs(XWPFDocument doc) {
+        for (XWPFParagraph p : doc.getParagraphs()) {
+            List<XWPFRun> runs = p.getRuns();
+            if (runs != null) {
+                for (XWPFRun r : runs) {
+                    String text = r.getText(0);
+                    if (text != null && text.contains("Absender Name")) {
+                        text = text.replace("Absender Name", NAME);//your content
+                        r.setText(text, 0);
+                    }
+                    if (text != null && text.contains("Absender Straße")) {
+                        text = text.replace("Absender Straße", STREET);//your content
+                        r.setText(text, 0);
+                    }
+                    if (text != null && text.contains("Absender Ort")) {
+                        text = text.replace("Absender Ort", ORT);//your content
+                        r.setText(text, 0);
+                    }
+                }
+            }
+        }
+    }
+
+    private static void updateTable(XWPFDocument doc) {
+
+        //the table
+
+        for (XWPFTable tbl : doc.getTables()) {
+            for (XWPFTableRow row : tbl.getRows()) {
+                for (XWPFTableCell cell : row.getTableCells()) {
+                    for (XWPFParagraph p : cell.getParagraphs()) {
+                        for (XWPFRun r : p.getRuns()) {
+                            String text = r.getText(0);
+
+                            if (text != null && text.contains("Fillial")) {
+                                text = text.replace("Fillial", Fillial);//your content
+                                r.setText(text, 0);
+                            }
+                            if (text != null && text.contains("Customernumber")) {
+                                text = text.replace("Customernumber", CUSTOMERNUMBER);//your content
+                                r.setText(text, 0);
+                            }
+                            if (text != null && text.contains("accountOwner")) {
+                                text = text.replace("accountOwner", ACCOUNTOWNER);//your content
+                                r.setText(text, 0);
+                            }
+                            if (text != null && text.contains("dateEnquiry")) {
+                                text = text.replace("dateEnquiry", DateEnquiry);//your content
+                                r.setText(text, 0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
