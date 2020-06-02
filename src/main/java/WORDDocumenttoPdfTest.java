@@ -43,8 +43,8 @@ public class WORDDocumenttoPdfTest {
 
             insertQrCodeImage(doc);
 
-            String wordFileName = "rezultaten13.docx";
-            String pdf = "rezultaten13.pdf";
+            String wordFileName = "rezultaten14.docx";
+            String pdf = "rezultaten14.pdf";
 
             doc.write(new FileOutputStream(wordFileName));
 
