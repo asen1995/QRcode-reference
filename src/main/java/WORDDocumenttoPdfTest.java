@@ -22,7 +22,7 @@ public class WORDDocumenttoPdfTest {
     private static final String ACCOUNTOWNER = "Asen Nikolaev";
 
 
-    private static final String DateEnquiry = "07.11.2018";
+    private static final String DateEnquiry = "07.11.2040";
 
 
 
@@ -79,6 +79,10 @@ public class WORDDocumenttoPdfTest {
                         text = text.replace("Absender Ort", ORT);//your content
                         r.setText(text, 0);
                     }
+                    if (text != null && text.contains("dateEnquiry")) {
+                        text = text.replace("dateEnquiry", DateEnquiry);//your content
+                        r.setText(text, 0);
+                    }
                 }
             }
         }
@@ -105,10 +109,6 @@ public class WORDDocumenttoPdfTest {
                             }
                             if (text != null && text.contains("accountOwner")) {
                                 text = text.replace("accountOwner", ACCOUNTOWNER);//your content
-                                r.setText(text, 0);
-                            }
-                            if (text != null && text.contains("dateEnquiry")) {
-                                text = text.replace("dateEnquiry", DateEnquiry);//your content
                                 r.setText(text, 0);
                             }
                         }
