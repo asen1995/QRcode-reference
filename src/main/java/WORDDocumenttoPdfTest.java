@@ -43,17 +43,14 @@ public class WORDDocumenttoPdfTest {
 
             insertQrCodeImage(doc);
 
-            String wordFileName = "rezultaten11.docx";
-            String pdf = "rezultaten11.pdf";
+            String wordFileName = "rezultaten13.docx";
+            String pdf = "rezultaten13.pdf";
 
             doc.write(new FileOutputStream(wordFileName));
 
-
             XWPFDocument forConvertion = new XWPFDocument(
                    OPCPackage.open(wordFileName));
-
             // 2) Convert POI XWPFDocument 2 PDF with iText
-
             File outFile = new File(pdf);
 
             OutputStream out = new FileOutputStream( outFile );
