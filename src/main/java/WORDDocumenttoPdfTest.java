@@ -43,7 +43,7 @@ public class WORDDocumenttoPdfTest {
 
             insertQrCodeImage(doc);
 
-            doc.write(new FileOutputStream("rezultaten.docx"));
+            doc.write(new FileOutputStream("rezultaten6.docx"));
 
         } finally {
 
@@ -58,7 +58,8 @@ public class WORDDocumenttoPdfTest {
                 for (XWPFRun r : runs) {
                     String text = r.getText(0);
                     if (text != null && ( text.contains("QRCODE"))) {
-                       // text = text.replace("QRCODE", " ");//your content
+                       text = text.replace("QRCODE", " ");//your content
+                        r.setText(text, 0);
 
                         List<XWPFPicture> embeddedPicturses = r.getEmbeddedPictures();
                         FileInputStream is = new FileInputStream("qrcode.jpg");
