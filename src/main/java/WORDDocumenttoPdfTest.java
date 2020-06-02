@@ -43,18 +43,8 @@ public class WORDDocumenttoPdfTest {
 
             insertQrCodeImage(doc);
 
-            doc.write(new FileOutputStream("output.docx"));
-//
-//            //convertion
-//            XWPFDocument forConvertion = new XWPFDocument(
-//                    OPCPackage.open("output.docx"));
-//
-//            // 2) Convert POI XWPFDocument 2 PDF with iText
-//            File outFile = new File( "tempwla4te-from-word3.pdf" );
-//
-//            OutputStream out = new FileOutputStream( outFile );
-//            PdfOptions options = PdfOptions.getDefault();
-//            PdfConverter.getInstance().convert( forConvertion, out, options );
+            doc.write(new FileOutputStream("rezultaten.docx"));
+
         } finally {
 
         }
@@ -67,17 +57,16 @@ public class WORDDocumenttoPdfTest {
             if (runs != null) {
                 for (XWPFRun r : runs) {
                     String text = r.getText(0);
-                    if (text != null && text.contains("QRCODE")) {
-                        text = text.replace("QRCODE", "QRCODE tuka");//your content
+                    if (text != null && ( text.contains("QRCODE"))) {
+                       // text = text.replace("QRCODE", " ");//your content
 
-                        //core for inserting qr image
-//                        List<XWPFPicture> embeddedPicturses = r.getEmbeddedPictures();
-//                        FileInputStream is = new FileInputStream("3.jpg");
-//
-//                        r.addPicture(is, Document.PICTURE_TYPE_JPEG,"3", Units.toEMU(200), Units.toEMU(200));
-//
-//                        is.close();
-//                        List<XWPFPicture> embeddedPictures = r.getEmbeddedPictures();
+                        List<XWPFPicture> embeddedPicturses = r.getEmbeddedPictures();
+                        FileInputStream is = new FileInputStream("qrcode.jpg");
+
+                        r.addPicture(is, Document.PICTURE_TYPE_JPEG, "qrcode.jpg", Units.toEMU(70), Units.toEMU(70));
+
+                        is.close();
+                        List<XWPFPicture> embeddedPictures = r.getEmbeddedPictures();
                     }
                 }
             }
