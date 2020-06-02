@@ -1,13 +1,12 @@
 import com.sun.media.sound.InvalidFormatException;
 import org.apache.poi.openxml4j.opc.OPCPackage;
+import org.apache.poi.util.IOUtils;
+import org.apache.poi.util.Units;
 import org.apache.poi.xwpf.converter.pdf.PdfConverter;
 import org.apache.poi.xwpf.converter.pdf.PdfOptions;
 import org.apache.poi.xwpf.usermodel.*;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.List;
 
 public class WORDDocumenttoPdfTest {
@@ -42,22 +41,47 @@ public class WORDDocumenttoPdfTest {
             updateParagraphs(doc);
             updateTable(doc);
 
+            insertQrCodeImage(doc);
+
             doc.write(new FileOutputStream("output.docx"));
-
-            //convertion
-            XWPFDocument forConvertion = new XWPFDocument(
-                    OPCPackage.open("output.docx"));
-
-            // 2) Convert POI XWPFDocument 2 PDF with iText
-            File outFile = new File( "tempwla4te-from-word3.pdf" );
-
-            OutputStream out = new FileOutputStream( outFile );
-            PdfOptions options = PdfOptions.getDefault();
-            PdfConverter.getInstance().convert( forConvertion, out, options );
+//
+//            //convertion
+//            XWPFDocument forConvertion = new XWPFDocument(
+//                    OPCPackage.open("output.docx"));
+//
+//            // 2) Convert POI XWPFDocument 2 PDF with iText
+//            File outFile = new File( "tempwla4te-from-word3.pdf" );
+//
+//            OutputStream out = new FileOutputStream( outFile );
+//            PdfOptions options = PdfOptions.getDefault();
+//            PdfConverter.getInstance().convert( forConvertion, out, options );
         } finally {
 
         }
 
+    }
+
+    private static void insertQrCodeImage(XWPFDocument docx) throws IOException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
+        for (XWPFParagraph p : docx.getParagraphs()) {
+            List<XWPFRun> runs = p.getRuns();
+            if (runs != null) {
+                for (XWPFRun r : runs) {
+                    String text = r.getText(0);
+                    if (text != null && text.contains("QRCODE")) {
+                        text = text.replace("QRCODE", "QRCODE tuka");//your content
+
+                        //core for inserting qr image
+//                        List<XWPFPicture> embeddedPicturses = r.getEmbeddedPictures();
+//                        FileInputStream is = new FileInputStream("3.jpg");
+//
+//                        r.addPicture(is, Document.PICTURE_TYPE_JPEG,"3", Units.toEMU(200), Units.toEMU(200));
+//
+//                        is.close();
+//                        List<XWPFPicture> embeddedPictures = r.getEmbeddedPictures();
+                    }
+                }
+            }
+        }
     }
 
 
@@ -71,6 +95,7 @@ public class WORDDocumenttoPdfTest {
                         text = text.replace("Absender Name", NAME);//your content
                         r.setText(text, 0);
                     }
+
                     if (text != null && text.contains("Absender Straße")) {
                         text = text.replace("Absender Straße", STREET);//your content
                         r.setText(text, 0);
