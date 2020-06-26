@@ -30,7 +30,12 @@
 <!--            <url>http://repo.e-iceblue.com/nexus/content/groups/public/</url>-->
 <!--        </repository>-->
 <!--    </repositories>-->
-
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId> e-iceblue </groupId>
@@ -51,6 +56,22 @@
             <groupId>fr.opensagres.xdocreport</groupId>
             <artifactId>org.apache.poi.xwpf.converter.pdf</artifactId>
             <version>1.0.1</version>
+        </dependency>
+
+
+
+        <!--QR code depedencies-->
+
+        <dependency>
+            <groupId>com.github.kenglxn.qrgen</groupId>
+            <artifactId>javase</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.barbecue/barbecue -->
+        <dependency>
+            <groupId>net.sourceforge.barbecue</groupId>
+            <artifactId>barbecue</artifactId>
+            <version>1.5-beta1</version>
         </dependency>
     </dependencies>
 

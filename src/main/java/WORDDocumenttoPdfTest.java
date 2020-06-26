@@ -29,24 +29,25 @@ public class WORDDocumenttoPdfTest {
             org.apache.poi.openxml4j.exceptions.InvalidFormatException {
         try {
 
-            /**
-             * if uploaded doc then use HWPF else if uploaded Docx file use
-             * XWPFDocument
-             */
+            //GET TEMPLATE DOCUMENT
             XWPFDocument doc = new XWPFDocument(
                     OPCPackage.open("otmail.docx"));
 
             updateParagraphs(doc);
             updateTable(doc);
 
-            insertQrCodeImage(doc);
 
-            String name = "pdfs/rezultaten60";
+            //GENERATE QR CODE AND INSERT IT IN DOCUMENT
+            String qrCodeFilePath = QRCodeGenerator.generateQRCode(UUID);
+            insertQrCodeImage(doc,qrCodeFilePath);
+
+            String name = "pdfs/rezultaten68";
             String wordFileName = name + ".docx";
             String pdf = name + ".pdf";
 
             doc.write(new FileOutputStream(wordFileName));
 
+            //CONVERT to PDF
             ConvertPdf.convertDocument(wordFileName,pdf);
 
         } finally {
@@ -55,7 +56,7 @@ public class WORDDocumenttoPdfTest {
 
     }
 
-    private static void insertQrCodeImage(XWPFDocument docx) throws IOException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
+    private static void insertQrCodeImage(XWPFDocument docx, String filePath) throws IOException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
         for (XWPFParagraph p : docx.getParagraphs()) {
             List<XWPFRun> runs = p.getRuns();
             if (runs != null) {
@@ -66,9 +67,9 @@ public class WORDDocumenttoPdfTest {
                         r.setText(text, 0);
 
                         List<XWPFPicture> embeddedPicturses = r.getEmbeddedPictures();
-                        FileInputStream is = new FileInputStream("qrcode.jpg");
+                        FileInputStream is = new FileInputStream(filePath);
 
-                        r.addPicture(is, Document.PICTURE_TYPE_JPEG, "qrcode.jpg", Units.toEMU(70), Units.toEMU(70));
+                        r.addPicture(is, Document.PICTURE_TYPE_JPEG, filePath, Units.toEMU(70), Units.toEMU(70));
 
                         is.close();
                         List<XWPFPicture> embeddedPictures = r.getEmbeddedPictures();
