@@ -13,7 +13,7 @@ public class WORDDocumenttoPdfTest {
 
     private static final String NAME = "Asen";
     private static final String STREET = "street";
-    private static final String ORT = "ORTNQKUV";
+    private static final String ORT = "nq";
 
     //TAbLE
     private static final String Fillial = "615";
@@ -45,7 +45,7 @@ public class WORDDocumenttoPdfTest {
 
             insertQrCodeImage(doc);
 
-            String name = "rezultaten29";
+            String name = "pdfs/rezultaten33";
             String wordFileName = name + ".docx";
             String pdf = name + ".pdf";
 
@@ -96,26 +96,31 @@ public class WORDDocumenttoPdfTest {
             if (runs != null) {
                 for (XWPFRun r : runs) {
                     String text = r.getText(0);
-                    if (text != null && text.contains("Absender Name")) {
-                        text = text.replace("Absender Name", NAME);//your content
+                    if (text != null && text.contains("name")) {
+                        text = text.replace("name", NAME);//your content
                         r.setText(text, 0);
+                        continue;
                     }
 
-                    if (text != null && text.contains("Absender Straße")) {
-                        text = text.replace("Absender Straße", STREET);//your content
+                    if (text != null && text.contains("Straße")) {
+                        text = text.replace("Straße", STREET);//your content
                         r.setText(text, 0);
+                        continue;
                     }
-                    if (text != null && text.contains("Absender Ort")) {
-                        text = text.replace("Absender Ort", ORT);//your content
+                    if (text != null && text.contains("Ort")) {
+                        text = text.replace("Ort", ORT);//your content
                         r.setText(text, 0);
+                        continue;
                     }
                     if (text != null && text.contains("UUID")) {
                         text = text.replace("UUID", UUID);//your content
                         r.setText(text, 0);
+                        continue;
                     }
                     if (text != null && text.contains("dateEnquiry")) {
                         text = text.replace("dateEnquiry", DateEnquiry);//your content
                         r.setText(text, 0);
+                        continue;
                     }
                 }
             }
@@ -136,14 +141,17 @@ public class WORDDocumenttoPdfTest {
                             if (text != null && text.contains("Fillial")) {
                                 text = text.replace("Fillial", Fillial);//your content
                                 r.setText(text, 0);
+                                continue;
                             }
                             if (text != null && text.contains("Customernumber")) {
                                 text = text.replace("Customernumber", CUSTOMERNUMBER);//your content
                                 r.setText(text, 0);
+                                continue;
                             }
                             if (text != null && text.contains("accountOwner")) {
                                 text = text.replace("accountOwner", ACCOUNTOWNER);//your content
                                 r.setText(text, 0);
+                                continue;
                             }
                         }
                     }

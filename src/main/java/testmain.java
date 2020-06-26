@@ -13,8 +13,8 @@ public class testmain {
     public static void main(String args[]) throws IOException,
             InvalidFormatException,
             org.apache.poi.openxml4j.exceptions.InvalidFormatException {
-        String wordFileName = "wordTestresult.docx";
-        String pdf = "wordTestresult.pdf";
+        String wordFileName = "rezultaten15.docx";
+        String pdf = "rezultaten15.pdf";
 
 
         XWPFDocument forConvertion = new XWPFDocument(

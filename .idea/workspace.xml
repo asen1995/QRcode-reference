@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="bbafd809-39b8-45b0-aedc-a14325effc21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result-from-word.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/otmail.docx" beforeDir="false" afterPath="$PROJECT_DIR$/otmail.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultaten14.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/testmain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testmain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PDFBoxTestMain.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/WORDDocumenttoPdfTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WORDDocumenttoPdfTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$rdTest.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.docx" beforeDir="false" afterPath="$PROJECT_DIR$/template.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +79,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testmain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testmain" />
+      <module name="pdfBox-test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.WORDDocumenttoPdfTest" />
+        <item itemvalue="Application.testmain" />
         <item itemvalue="Application.PDFBoxTestMain" />
         <item itemvalue="Application.pdffilecreator" />
       </list>
@@ -95,78 +107,122 @@
       <updated>1590661851485</updated>
       <workItem from="1590661854652" duration="9527000" />
       <workItem from="1590732282627" duration="5553000" />
-      <workItem from="1590990816504" duration="10549000" />
+      <workItem from="1590990816504" duration="40721000" />
+      <workItem from="1592977549207" duration="6007000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="574" y="116" key="#com.intellij.ide.util.MemberChooser" timestamp="1591014906756">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="116" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591014906756" />
     <state x="524" y="30" key="#xdebugger.evaluate" timestamp="1590671668171">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="524" y="30" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1590671668171" />
-    <state width="427" height="618" key="DebuggerActiveHint" timestamp="1591013358198">
+    <state width="473" height="618" key="DebuggerActiveHint" timestamp="1591082888971">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="427" height="618" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1591013358198" />
+    <state width="473" height="618" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1591082888971" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590996340231">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590996340231" />
-    <state width="1493" height="216" key="GridCell.Tab.0.bottom" timestamp="1591014345480">
+    <state width="1493" height="142" key="GridCell.Tab.0.bottom" timestamp="1593157266193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591014345480" />
-    <state width="1493" height="216" key="GridCell.Tab.0.center" timestamp="1591014345480">
+    <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593157266193" />
+    <state width="1493" height="142" key="GridCell.Tab.0.center" timestamp="1593157266193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591014345480" />
-    <state width="1493" height="216" key="GridCell.Tab.0.left" timestamp="1591014345480">
+    <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593157266193" />
+    <state width="1493" height="142" key="GridCell.Tab.0.left" timestamp="1593157266192">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591014345480" />
-    <state width="1493" height="216" key="GridCell.Tab.0.right" timestamp="1591014345480">
+    <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593157266192" />
+    <state width="1493" height="142" key="GridCell.Tab.0.right" timestamp="1593157266193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591014345480" />
-    <state width="1493" height="310" key="GridCell.Tab.1.bottom" timestamp="1591014187526">
+    <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593157266193" />
+    <state width="1493" height="240" key="GridCell.Tab.1.bottom" timestamp="1593157151046">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="310" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591014187526" />
-    <state width="1493" height="310" key="GridCell.Tab.1.center" timestamp="1591014187526">
+    <state width="1493" height="240" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593157151046" />
+    <state width="1493" height="240" key="GridCell.Tab.1.center" timestamp="1593157151045">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="310" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591014187526" />
-    <state width="1493" height="310" key="GridCell.Tab.1.left" timestamp="1591014187526">
+    <state width="1493" height="240" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1593157151045" />
+    <state width="1493" height="240" key="GridCell.Tab.1.left" timestamp="1593157151044">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="310" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591014187526" />
-    <state width="1493" height="310" key="GridCell.Tab.1.right" timestamp="1591014187526">
+    <state width="1493" height="240" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1593157151044" />
+    <state width="1493" height="240" key="GridCell.Tab.1.right" timestamp="1593157151046">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="310" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591014187526" />
+    <state width="1493" height="240" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1593157151046" />
     <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590990840618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590990840618" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1591009402897">
+    <state x="270" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591098817202">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1591009402897" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1591013406219">
+    <state x="270" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1591098817202" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1591081056103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1591013406219" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1591081056103" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1593155708316">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1593155708316" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="64" />
+          <line>115</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
