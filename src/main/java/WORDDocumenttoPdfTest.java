@@ -21,6 +21,8 @@ public class WORDDocumenttoPdfTest {
     private static final String ACCOUNTOWNER = "Asen Nikolaev";
 
 
+    private static final String UUID = "dbed9ce7-a200-4271-b1ca-095384581aad";
+
     private static final String DateEnquiry = "07.11.2040";
 
 
@@ -36,15 +38,16 @@ public class WORDDocumenttoPdfTest {
              * XWPFDocument
              */
             XWPFDocument doc = new XWPFDocument(
-                    OPCPackage.open("template.docx"));
+                    OPCPackage.open("otmail.docx"));
 
             updateParagraphs(doc);
             updateTable(doc);
 
             insertQrCodeImage(doc);
 
-            String wordFileName = "rezultaten14.docx";
-            String pdf = "rezultaten14.pdf";
+            String name = "rezultaten29";
+            String wordFileName = name + ".docx";
+            String pdf = name + ".pdf";
 
             doc.write(new FileOutputStream(wordFileName));
 
@@ -104,6 +107,10 @@ public class WORDDocumenttoPdfTest {
                     }
                     if (text != null && text.contains("Absender Ort")) {
                         text = text.replace("Absender Ort", ORT);//your content
+                        r.setText(text, 0);
+                    }
+                    if (text != null && text.contains("UUID")) {
+                        text = text.replace("UUID", UUID);//your content
                         r.setText(text, 0);
                     }
                     if (text != null && text.contains("dateEnquiry")) {
