@@ -7,6 +7,8 @@ import org.apache.poi.xwpf.converter.pdf.PdfOptions;
 import org.apache.poi.xwpf.usermodel.*;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 public class WORDDocumenttoPdfTest {
@@ -18,15 +20,22 @@ public class WORDDocumenttoPdfTest {
     //TAbLE
     private static final String Fillial = "615";
     private static final String CUSTOMERNUMBER = "9050501";
-    private static final String ACCOUNTOWNER = "Vili Nikolaev";
+    private static final String ACCOUNTOWNER = "asen Nikolaev";
 
 
-    private static final String UUID = "dbed9ce7-a200-4271-b1ca-095384581aad";
+    private static final String UUID = "dbed9ce7-a200-4271-b1ca-095384581aaasedasen";
 
     private static final String DateEnquiry = "07.11.2050";
 
     public static void main(String args[]) throws IOException,
             org.apache.poi.openxml4j.exceptions.InvalidFormatException {
+
+        String name = "pdfs/rezultaten75";
+
+        String pdfFilePath = null;
+        String docxFilePath = null;
+        String qrCodeFilePath = null;
+
         try {
 
             //GET TEMPLATE DOCUMENT
@@ -38,20 +47,25 @@ public class WORDDocumenttoPdfTest {
 
 
             //GENERATE QR CODE AND INSERT IT IN DOCUMENT
-            String qrCodeFilePath = QRCodeGenerator.generateQRCode(UUID);
+            qrCodeFilePath = QRCodeGenerator.generateQRCode(UUID);
             insertQrCodeImage(doc,qrCodeFilePath);
 
-            String name = "pdfs/rezultaten68";
-            String wordFileName = name + ".docx";
-            String pdf = name + ".pdf";
+            docxFilePath = name + ".docx";
+            pdfFilePath = name + ".pdf";
 
-            doc.write(new FileOutputStream(wordFileName));
+            doc.write(new FileOutputStream(docxFilePath));
 
             //CONVERT to PDF
-            ConvertPdf.convertDocument(wordFileName,pdf);
+            ConvertPdf.convertDocument(docxFilePath,pdfFilePath);
 
         } finally {
-
+             //clearing resources
+            if(docxFilePath != null) {
+                Files.deleteIfExists(Paths.get(docxFilePath));
+            }
+            if(qrCodeFilePath != null) {
+                Files.deleteIfExists(Paths.get(qrCodeFilePath));
+            }
         }
 
     }
