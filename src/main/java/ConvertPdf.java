@@ -4,13 +4,13 @@ import com.spire.doc.FileFormat;
 
 public class ConvertPdf {
 
-    public static void main(String args[]) {
+    public static void convertDocument(String docxFilePath, String pdfFilePath) {
 
         //create a Word document
-        Document document = new Document("pdfs/rezultaten33.docx");
+        Document document = new Document(docxFilePath);
 
-        //save the document
-        document.saveToFile("output15.pdf", FileFormat.PDF);
+        //save the pdf document
+        document.saveToFile(pdfFilePath, FileFormat.PDF);
 
     }
 

@@ -11,25 +11,21 @@ import java.util.List;
 
 public class WORDDocumenttoPdfTest {
 
-    private static final String NAME = "Asen";
+    private static final String NAME = "Vili";
     private static final String STREET = "street";
     private static final String ORT = "nq";
 
     //TAbLE
     private static final String Fillial = "615";
     private static final String CUSTOMERNUMBER = "9050501";
-    private static final String ACCOUNTOWNER = "Asen Nikolaev";
+    private static final String ACCOUNTOWNER = "Vili Nikolaev";
 
 
     private static final String UUID = "dbed9ce7-a200-4271-b1ca-095384581aad";
 
-    private static final String DateEnquiry = "07.11.2040";
-
-
-
+    private static final String DateEnquiry = "07.11.2050";
 
     public static void main(String args[]) throws IOException,
-            InvalidFormatException,
             org.apache.poi.openxml4j.exceptions.InvalidFormatException {
         try {
 
@@ -45,20 +41,13 @@ public class WORDDocumenttoPdfTest {
 
             insertQrCodeImage(doc);
 
-            String name = "pdfs/rezultaten33";
+            String name = "pdfs/rezultaten60";
             String wordFileName = name + ".docx";
             String pdf = name + ".pdf";
 
             doc.write(new FileOutputStream(wordFileName));
 
-            XWPFDocument forConvertion = new XWPFDocument(
-                   OPCPackage.open(wordFileName));
-            // 2) Convert POI XWPFDocument 2 PDF with iText
-            File outFile = new File(pdf);
-
-            OutputStream out = new FileOutputStream( outFile );
-            PdfOptions options = PdfOptions.getDefault();
-            PdfConverter.getInstance().convert( forConvertion, out, options );
+            ConvertPdf.convertDocument(wordFileName,pdf);
 
         } finally {
 
