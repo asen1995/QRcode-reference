@@ -23,14 +23,14 @@ public class WORDDocumenttoPdfTest {
     private static final String ACCOUNTOWNER = "asen Nikolaev";
 
 
-    private static final String UUID = "dbed9ce7-a200-4271-b1ca-095384581aaasedasen";
+    private static final String UUID = "dbed9ce7-a200-4271-b1ca-095384581NovoUUID";
 
     private static final String DateEnquiry = "07.11.2050";
 
     public static void main(String args[]) throws IOException,
             org.apache.poi.openxml4j.exceptions.InvalidFormatException {
 
-        String name = "pdfs/rezultaten75";
+        String name = "pdfs/rezultaten78";
 
         String pdfFilePath = null;
         String docxFilePath = null;
@@ -47,8 +47,7 @@ public class WORDDocumenttoPdfTest {
 
 
             //GENERATE QR CODE AND INSERT IT IN DOCUMENT
-            qrCodeFilePath = QRCodeGenerator.generateQRCode(UUID);
-            insertQrCodeImage(doc,qrCodeFilePath);
+            insertQrCodeImage(doc,UUID);
 
             docxFilePath = name + ".docx";
             pdfFilePath = name + ".pdf";
@@ -70,7 +69,7 @@ public class WORDDocumenttoPdfTest {
 
     }
 
-    private static void insertQrCodeImage(XWPFDocument docx, String filePath) throws IOException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
+    private static void insertQrCodeImage(XWPFDocument docx, String UUID) throws IOException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
         for (XWPFParagraph p : docx.getParagraphs()) {
             List<XWPFRun> runs = p.getRuns();
             if (runs != null) {
@@ -80,13 +79,11 @@ public class WORDDocumenttoPdfTest {
                        text = text.replace("QRCODE", " ");//your content
                         r.setText(text, 0);
 
-                        List<XWPFPicture> embeddedPicturses = r.getEmbeddedPictures();
-                        FileInputStream is = new FileInputStream(filePath);
+                        ByteArrayInputStream byteArrayInputStream = QRCodeGenerator.generateQRCode(UUID);
+                        String filename = "QrCode.jpg";
+                        r.addPicture(byteArrayInputStream, Document.PICTURE_TYPE_JPEG, filename, Units.toEMU(70), Units.toEMU(70));
 
-                        r.addPicture(is, Document.PICTURE_TYPE_JPEG, filePath, Units.toEMU(70), Units.toEMU(70));
-
-                        is.close();
-                        List<XWPFPicture> embeddedPictures = r.getEmbeddedPictures();
+                        byteArrayInputStream.close();
                     }
                 }
             }
