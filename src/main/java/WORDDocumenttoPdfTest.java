@@ -23,20 +23,12 @@ public class WORDDocumenttoPdfTest {
     private static final String ACCOUNTOWNER = "asen Nikolaev";
 
 
-    private static final String UUID = "dbed9ce7-a200-4271-b1ca-095384581NovoUUID";
+    private static final String UUID = "dbed9ce7-a200-4271-b1ca-095384581asen";
 
     private static final String DateEnquiry = "07.11.2050";
 
     public static void main(String args[]) throws IOException,
             org.apache.poi.openxml4j.exceptions.InvalidFormatException {
-
-        String name = "pdfs/rezultaten78";
-
-        String pdfFilePath = null;
-        String docxFilePath = null;
-        String qrCodeFilePath = null;
-
-        try {
 
             //GET TEMPLATE DOCUMENT
             XWPFDocument doc = new XWPFDocument(
@@ -45,28 +37,11 @@ public class WORDDocumenttoPdfTest {
             updateParagraphs(doc);
             updateTable(doc);
 
-
             //GENERATE QR CODE AND INSERT IT IN DOCUMENT
             insertQrCodeImage(doc,UUID);
 
-            docxFilePath = name + ".docx";
-            pdfFilePath = name + ".pdf";
-
-            doc.write(new FileOutputStream(docxFilePath));
-
             //CONVERT to PDF
-            ConvertPdf.convertDocument(docxFilePath,pdfFilePath);
-
-        } finally {
-             //clearing resources
-            if(docxFilePath != null) {
-                Files.deleteIfExists(Paths.get(docxFilePath));
-            }
-            if(qrCodeFilePath != null) {
-                Files.deleteIfExists(Paths.get(qrCodeFilePath));
-            }
-        }
-
+            byte[] bytes = ConvertPdf.convertDoc(doc);
     }
 
     private static void insertQrCodeImage(XWPFDocument docx, String UUID) throws IOException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
