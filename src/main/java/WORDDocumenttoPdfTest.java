@@ -9,6 +9,8 @@ import org.apache.poi.xwpf.usermodel.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class WORDDocumenttoPdfTest {
@@ -94,7 +96,9 @@ public class WORDDocumenttoPdfTest {
                         continue;
                     }
                     if (text != null && text.contains("dateEnquiry")) {
-                        text = text.replace("dateEnquiry", DateEnquiry);//your content
+
+                        String formatedDate = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
+                        text = text.replace("dateEnquiry", formatedDate);//your content
                         r.setText(text, 0);
                         continue;
                     }
