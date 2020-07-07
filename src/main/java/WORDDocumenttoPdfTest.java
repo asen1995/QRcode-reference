@@ -15,14 +15,14 @@ import java.util.List;
 
 public class WORDDocumenttoPdfTest {
 
-    private static final String NAME = "Vili";
-    private static final String STREET = "street";
-    private static final String ORT = "nq";
+    private static final String NAME = "Zeitlos Selbstständig";
+    private static final String STREET = "ulitsa ";
+    private static final String ORT = "Sofia";
 
     //TAbLE
     private static final String Fillial = "615";
     private static final String CUSTOMERNUMBER = "9050501";
-    private static final String ACCOUNTOWNER = "asen Nikolaev";
+    private static final String ACCOUNTOWNER = "Zeitlos Selbstständig";
 
 
     private static final String UUID = "dbed9ce7-a200-4271-b1ca-095384581asen";
