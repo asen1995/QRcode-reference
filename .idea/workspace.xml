@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bbafd809-39b8-45b0-aedc-a14325effc21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/otmail.docx" beforeDir="false" afterPath="$PROJECT_DIR$/otmail.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otmail.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rezultaten14.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qrcode.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/testmain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testmain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PDFBoxTestMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/pdfBox-test.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/WORDDocumenttoPdfTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WORDDocumenttoPdfTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.docx" beforeDir="false" afterPath="$PROJECT_DIR$/template.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testmain.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +55,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\nevexisInvoices\pdfBox-test" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
   </component>
   <component name="RunManager" selected="Application.WORDDocumenttoPdfTest">
     <configuration name="PDFBoxTestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -109,6 +113,17 @@
       <workItem from="1590732282627" duration="5553000" />
       <workItem from="1590990816504" duration="40721000" />
       <workItem from="1592977549207" duration="6007000" />
+      <workItem from="1593687650993" duration="7836000" />
+      <workItem from="1594034168128" duration="2716000" />
+      <workItem from="1594109868320" duration="2875000" />
+      <workItem from="1594134742869" duration="5252000" />
+      <workItem from="1594295010468" duration="130000" />
+      <workItem from="1599828608617" duration="1733000" />
+      <workItem from="1600063668573" duration="1481000" />
+      <workItem from="1600155452838" duration="892000" />
+      <workItem from="1600258081486" duration="70000" />
+      <workItem from="1600622441309" duration="568000" />
+      <workItem from="1601215936077" duration="952000" />
     </task>
     <servers />
   </component>
@@ -126,105 +141,66 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="116" key="#com.intellij.ide.util.MemberChooser" timestamp="1591014906756">
+    <state x="561" y="253" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593688043770">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="116" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591014906756" />
-    <state x="524" y="30" key="#xdebugger.evaluate" timestamp="1590671668171">
+    <state x="561" y="253" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1593688043770" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594134834571">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="524" y="30" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1590671668171" />
-    <state width="473" height="618" key="DebuggerActiveHint" timestamp="1591082888971">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594134834571" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1594112549763">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="473" height="618" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1591082888971" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590996340231">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594112549763" />
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom" timestamp="1600156488318">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590996340231" />
-    <state width="1493" height="142" key="GridCell.Tab.0.bottom" timestamp="1593157266193">
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600156488318" />
+    <state width="1493" height="189" key="GridCell.Tab.0.center" timestamp="1600156488317">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593157266193" />
-    <state width="1493" height="142" key="GridCell.Tab.0.center" timestamp="1593157266193">
+    <state width="1493" height="189" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600156488317" />
+    <state width="1493" height="189" key="GridCell.Tab.0.left" timestamp="1600156488317">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593157266193" />
-    <state width="1493" height="142" key="GridCell.Tab.0.left" timestamp="1593157266192">
+    <state width="1493" height="189" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600156488317" />
+    <state width="1493" height="189" key="GridCell.Tab.0.right" timestamp="1600156488318">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593157266192" />
-    <state width="1493" height="142" key="GridCell.Tab.0.right" timestamp="1593157266193">
+    <state width="1493" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600156488318" />
+    <state width="1493" height="276" key="GridCell.Tab.1.bottom" timestamp="1600064568353">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593157266193" />
-    <state width="1493" height="240" key="GridCell.Tab.1.bottom" timestamp="1593157151046">
+    <state width="1493" height="276" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600064568353" />
+    <state width="1493" height="276" key="GridCell.Tab.1.center" timestamp="1600064568352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593157151046" />
-    <state width="1493" height="240" key="GridCell.Tab.1.center" timestamp="1593157151045">
+    <state width="1493" height="276" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1600064568352" />
+    <state width="1493" height="276" key="GridCell.Tab.1.left" timestamp="1600064568352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1593157151045" />
-    <state width="1493" height="240" key="GridCell.Tab.1.left" timestamp="1593157151044">
+    <state width="1493" height="276" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1600064568352" />
+    <state width="1493" height="276" key="GridCell.Tab.1.right" timestamp="1600064568353">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1593157151044" />
-    <state width="1493" height="240" key="GridCell.Tab.1.right" timestamp="1593157151046">
+    <state width="1493" height="276" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1600064568353" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1601215932516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1593157151046" />
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590990840618">
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1600624219388" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1601215932516" />
+    <state x="270" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594142614683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590990840618" />
-    <state x="270" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591098817202">
+    <state x="270" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1594142614683" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1593689389707">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1591098817202" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1591081056103">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1593689389707" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600089470540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1591081056103" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1593155708316">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1593155708316" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
-          <line>115</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
-          <line>110</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/WORDDocumenttoPdfTest.java</url>
-          <line>100</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600089470540" />
   </component>
 </project>

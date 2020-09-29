@@ -15,14 +15,14 @@ import java.util.List;
 
 public class WORDDocumenttoPdfTest {
 
-    private static final String NAME = "Zeitlos Selbstständig";
-    private static final String STREET = "ulitsa ";
-    private static final String ORT = "Sofia";
+    private static final String NAME = "Tippmann & Kietz GmbH";
+    private static final String STREET = "ulica haus2 ";
+    private static final String ORT = "3601 Sofia";
 
     //TAbLE
     private static final String Fillial = "615";
     private static final String CUSTOMERNUMBER = "9050501";
-    private static final String ACCOUNTOWNER = "Zeitlos Selbstständig";
+    private static final String ACCOUNTOWNER = "Tippmann & Kietz GmbH";
 
 
     private static final String UUID = "dbed9ce7-a200-4271-b1ca-095384581asen";
@@ -34,7 +34,7 @@ public class WORDDocumenttoPdfTest {
 
             //GET TEMPLATE DOCUMENT
             XWPFDocument doc = new XWPFDocument(
-                    OPCPackage.open("otmail.docx"));
+                    OPCPackage.open("returnCoverSheetTemplate.docx"));
 
             updateParagraphs(doc);
             updateTable(doc);
@@ -74,11 +74,19 @@ public class WORDDocumenttoPdfTest {
             if (runs != null) {
                 for (XWPFRun r : runs) {
                     String text = r.getText(0);
+
+
+                    if (text != null && text.contains("salutation")) {
+                        text = text.replace("salutation", "");//your content
+                        r.setText(text, 0);
+                        continue;
+                    }
                     if (text != null && text.contains("name")) {
                         text = text.replace("name", NAME);//your content
                         r.setText(text, 0);
                         continue;
                     }
+
 
                     if (text != null && text.contains("Straße")) {
                         text = text.replace("Straße", STREET);//your content
@@ -87,6 +95,11 @@ public class WORDDocumenttoPdfTest {
                     }
                     if (text != null && text.contains("Ort")) {
                         text = text.replace("Ort", ORT);//your content
+                        r.setText(text, 0);
+                        continue;
+                    }
+                    if (text != null && text.contains("SalutationBody")) {
+                        text = text.replace("SalutationBody", "Sehr geehrte Geschäftsleitung - Tippmann & Kietz GmbH,");//your content
                         r.setText(text, 0);
                         continue;
                     }

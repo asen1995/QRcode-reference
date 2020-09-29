@@ -22,14 +22,6 @@
     <properties>
         <poi.version>4.1.1</poi.version>
     </properties>
-
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>com.e-iceblue</id>-->
-<!--            <name>e-iceblue</name>-->
-<!--            <url>http://repo.e-iceblue.com/nexus/content/groups/public/</url>-->
-<!--        </repository>-->
-<!--    </repositories>-->
     <repositories>
         <repository>
             <id>jitpack.io</id>
